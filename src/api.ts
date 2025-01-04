@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 
 // init database
-database.createTables();
+database.SQL.createTables();
 
 // bind urls to app
 bindUrls(app);
