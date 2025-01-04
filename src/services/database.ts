@@ -1,6 +1,17 @@
 import * as sqlite3 from 'sqlite3';
+import { settings } from './settings';
 
-export function createTables(db: sqlite3.Database) {
+// open database
+export const db = new sqlite3.Database(
+    settings.paths.database,
+    sqlite3.OPEN_CREATE | sqlite3.OPEN_READWRITE
+);
+console.debug('Database opened');
+
+/**
+ * Creates tables in database
+ */
+export function createTables() {
     db.run(`
         CREATE TABLE IF NOT EXISTS mailboxes (
             id TEXT PRIMARY KEY,
@@ -28,4 +39,5 @@ export function createTables(db: sqlite3.Database) {
             expireDate INTEGER
         );
     `);
+    console.debug('Tables created');
 }
