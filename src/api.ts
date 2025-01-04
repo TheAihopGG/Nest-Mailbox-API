@@ -3,7 +3,6 @@ import * as sqlite3 from 'sqlite3';
 import * as express from 'express';
 import { loadSettings } from './services/settings';
 import { createTables } from './services/database';
-import { request } from 'http';
 
 // init environments parameters
 dotenv.config();
