@@ -11,7 +11,7 @@ See [INSTALL.md](INSTALL.md)
 ### Stacks
 
 - [TypeScript](https://www.typescriptlang.org/) (source code)
-- [NodeJS] (compiled code)
+- [NodeJS](https://nodejs.org/en) (compiled code)
 
 ### NPM Packages
 
