@@ -12,7 +12,7 @@ export namespace SettingsInterfaces {
         /** Contains paths to static files*/
         paths: IPaths,
         /** Contains listening ports*/
-        ports: number[]
+        port: number
     }
 }
 
@@ -21,8 +21,8 @@ export namespace SettingsInterfaces {
  * 
  * @param path - path to settings file
 */
-export function loadSettings(path: string): SettingsInterfaces.ISettings {
+export function loadSettings(path: string = process.env.APP_SETTINGS_PATH): SettingsInterfaces.ISettings {
     return JSON.parse(
-        readFileSync(process.env.APP_SETTINGS_PATH).toString()
+        readFileSync(path).toString()
     );
 }
