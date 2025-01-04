@@ -3,18 +3,15 @@ import { readFileSync } from 'fs';
 * Contains interfaces for data/appSettings.json. Use ISettings, when you loads settings file.
 */
 export namespace SettingsInterfaces {
-    /**
-    * @param database - contains path to database
-    */
     interface IPaths {
+        /** Contains path to database file*/
         database: string
     }
 
-    /**
-    * @param paths - contains paths to static files
-    */
     export interface ISettings {
+        /** Contains paths to static files*/
         paths: IPaths,
+        /** Contains listening ports*/
         ports: number[]
     }
 }
