@@ -14,11 +14,7 @@ const db = new sqlite3.Database(
 console.debug('Database opened');
 
 // enable graceful stop
-process.once('SIGINT', () => {
-    db.close();
-    console.debug('Database closed');
-});
-process.once('SIGTERM', () => {
+process.once('beforeExit', () => {
     db.close();
     console.debug('Database closed');
 });
