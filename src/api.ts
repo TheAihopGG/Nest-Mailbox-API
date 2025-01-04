@@ -3,6 +3,7 @@ import * as sqlite3 from 'sqlite3';
 import * as express from 'express';
 import { loadSettings } from './services/settings';
 import { createTables } from './services/database';
+import { bindUrls } from './services/urls';
 
 // init environments parameters
 dotenv.config();
@@ -21,10 +22,8 @@ const app = express();
 createTables(db);
 console.debug('Tables created');
 
-// test
-app.get('/', (request, response) => {
-    response.send('<h1>Hello</h1>');
-});
+// bind urls to app
+bindUrls(app);
 
 // enable graceful stop
 process.once('beforeExit', () => {
