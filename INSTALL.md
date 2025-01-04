@@ -1,26 +1,28 @@
 # Setup
 
-## Windows
+## 🪟 Windows
 
 To install and launch Nest API on Windows:
 
-1. Make sure that node js and npm have installed
+1. Download the [latest release](https://github.com/TheAihopGG/Nest-Mailbox-API/releases/latest) for linux
 
-2. Create, and append to `.env` file these parameters:
+2. Make sure that node js and npm have installed
+
+3. Create, and append to `.env` file these parameters:
 
     ```typescript
-    API_PASSWORD=12345 // password to admin     panel 
+    API_PASSWORD=12345 // password to admin panel 
     APP_SETTINGS_PATH=data/appSetting.json //   path to app settings, make sure that it is existing 
     ```
 
-3. Install packages with
+4. Install packages with
 
     ```bash
     npm install
     ```
 
-4. Launch server
+5. Launch server
 
     ```bash
-    npm run startServer
+    npm run server
     ```
