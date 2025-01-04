@@ -13,6 +13,7 @@ export namespace SettingsInterfaces {
     * @param paths - contains paths to static files
     */
     export interface ISettings {
-        paths: IPaths
+        paths: IPaths,
+        ports: number[]
     }
 }
