@@ -6,6 +6,10 @@ This is a pet-project, made with typescript and sqlite3. It have created to prac
 
 See [INSTALL.md](INSTALL.md)
 
+## API Reference
+
+See [API.md](API.md)
+
 ## Technologies
 
 ### Stacks
