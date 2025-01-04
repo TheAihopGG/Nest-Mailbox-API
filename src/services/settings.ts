@@ -13,7 +13,9 @@ export interface ISettings {
     /** Contains paths to static files*/
     paths: IPaths,
     /** Contains listening ports*/
-    port: number
+    port: number,
+    /** Session lifetime in seconds */
+    sessionLifeTime: number
 }
 
 export const settings: ISettings = JSON.parse(
